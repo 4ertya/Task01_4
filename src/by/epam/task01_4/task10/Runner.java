@@ -7,6 +7,6 @@ public class Runner {
         checker.check();
         System.out.println(checker.isIncreasingProgression());
         System.out.println(checker.isHasIdenticalNearby());
-        System.out.println(checker.isHhh());
+        System.out.println(checker.isChangingSings());
     }
 }

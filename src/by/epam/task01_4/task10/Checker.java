@@ -7,7 +7,7 @@ public class Checker {
     private int b;
     private boolean increasingProgression;
     private boolean hasIdenticalNearby;
-    private boolean hhh;
+    private boolean changingSings;
 
     public boolean isIncreasingProgression() {
         return increasingProgression;
@@ -17,13 +17,13 @@ public class Checker {
         return hasIdenticalNearby;
     }
 
-    public boolean isHhh() {
-        return hhh;
+    public boolean isChangingSings() {
+        return changingSings;
     }
 
     {
         increasingProgression = true;
-        hhh = true;
+        changingSings = true;
     }
 
     public void check() {
@@ -41,7 +41,7 @@ public class Checker {
             if (n >= 1) {
                 increasingProgression();
                 hasIdenticalNearby();
-                hhh();
+                changingSigns();
             }
             n++;
         }
@@ -59,12 +59,12 @@ public class Checker {
         }
     }
 
-    public void hhh() {
+    public void changingSigns() {
         if (a < 0 && b < 0) {
-            hhh = false;
+            changingSings = false;
         }
         if (a > 0 && b > 0) {
-            hhh = false;
+            changingSings = false;
         }
     }
 }

@@ -11,10 +11,10 @@ public class DataEntry {
         while (true) {
             System.out.print("Enter X: ");
             Scanner scanner = new Scanner(System.in);
-            try {
+            if (scanner.hasNextDouble()) {
                 temp = scanner.nextDouble();
                 break;
-            } catch (InputMismatchException e) {
+            } else {
                 System.out.println("Enter a number from -1.7e+308 to 1.7e+308");
             }
         }
