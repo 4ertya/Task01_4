@@ -20,7 +20,7 @@ public class DataEntry {
                 arg+=3;
                 break;
             } else{
-                System.out.println("Enter a number from -1.7e+308 to 1.7e+308");
+                System.out.println("Enter a Integer");
             }
         }
         return temp;
