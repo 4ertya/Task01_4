@@ -1,41 +1,57 @@
 package by.epam.task01_4.task2;
 
 public class Calendar {
-    private int dayInYear;
-    private final int[] daysInMonths = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    private final String[] months = {
-            "January", "February", "March",
-            "April", "May", "June",
-            "July", "August", "September",
-            "October", "November", "December"};
-    private String month;
-    private int day;
 
-    public void setDayInYear(int dayInYear) {
-        this.dayInYear = dayInYear;
-    }
+    private final int dayInYear = 56;
 
-    public String findMonth() {
+    public String getDate() {
+        int day;
+        int month;
+        boolean hasMonth;
+
         day = dayInYear;
+        month = 1;
+        hasMonth = false;
 
-        for (int i = 0; i < months.length; i++) {
-            day = day - daysInMonths[i];
-            if (day <= 0) {
-                day = day + daysInMonths[i];
-                return month = months[i];
+        while (!hasMonth) {
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if ((day - 31) <= 0) {
+                        hasMonth = true;
+                        break;
+                    }
+                    day = day - 31;
+                    month++;
+                    break;
+
+                case 2:
+                    if ((day - 28) <= 0) {
+                        hasMonth = true;
+                        break;
+                    }
+                    day = day - 28;
+                    month++;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if ((day - 30) <= 0) {
+                        hasMonth = true;
+                        break;
+                    }
+                    day = day - 30;
+                    month++;
+                    break;
             }
         }
-        return null;
+        return "day: " + day + "\nmonth: " + month;
     }
-
-    public int findDay() {
-        return day;
-    }
-
-    public void printDate() {
-        System.out.println("Date: " + month + ", " + day);
-    }
-
 
 }
-
